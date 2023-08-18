@@ -1528,7 +1528,7 @@ function getAlpha(string) {
 // generators
 function hexString(rgba, a) {
    var a = (a !== undefined && rgba.length === 3) ? a : rgba[3];
-   return "#" + hexDouble(rgba[0]) 
+   return "#" + hexDouble(rgba[0])
               + hexDouble(rgba[1])
               + hexDouble(rgba[2])
               + (
@@ -5793,9 +5793,15 @@ core_defaults._set('line', {
 			type: 'category',
 			id: 'x-axis-0'
 		}],
-		yAxes: [{
+		y1Axes: [{
 			type: 'linear',
+			position: 'left',
 			id: 'y-axis-0'
+		}],
+		y2Axes: [{
+			type: 'linear',
+			position: 'right',
+			id: 'y-axis-2'
 		}]
 	}
 });
