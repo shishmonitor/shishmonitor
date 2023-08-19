@@ -20,7 +20,25 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+    .overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: auto; /* Full width (cover the whole page) */
+  height: 130%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,255,0,1); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: auto;; /* Add a pointer on hover */
+   pointer-events: none;
+  opacity: 0;
+}
+</style>
 
+
+<img class="overlay" src="img/overlay2.gif" alt="..." />
 </head>
 
 <body id="page-top">
@@ -29,53 +47,113 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" style="background: #000000;" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="data.html">
                 <div class="sidebar-brand-icon">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <img class="img-fluid rounded" src="img/shishw.png" alt="..." /></figure>
                 </div>
                 <div class="sidebar-brand-text mx-3">Dashboard</div>
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider my-0 mb-2">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="data.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <div class="sidebar-heading mt-4" style="font-size: 14px">
                 Interface
             </div>
+
+            <li class="nav-item">
+
+
+
+           </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
 
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item mt-4">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span style="font-size: 16px">Anzeige</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    <div class="card shadow h-100 m-0" style="background: rgba(0, 0, 0, 1); border: rgba(255, 0, 0, 0.3);">
+                        <div class="card-body">
+                          <div class="card shadow h-100 mb-2" style="background: rgba(0, 0, 0, 0.0); border: rgba(0, 0, 0, 0.0);">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+
+
+
+                                        <a id="allButton" class="btn btn-dark btn-block">
+                                          <span class="icon text-gray-600">
+                                          </span>
+                                          <span class="text">Alle</span>
+                                        </a>
+
+                                        <a id="resetButton" class="btn btn-dark btn-block">
+                                          <span class="icon text-gray-600">
+                                            <i class="fas fa-trash"></i>
+                                          </span>
+                                          <span class="text">Reset</span>
+                                        </a>
+
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                  <div class="card h-100 m-0" style="background: rgba(0, 0, 0, 1); border: rgba(255, 0, 0, 0.3);">
+                                      <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                  <a id="temp1Button" class="btn btn-block shadow" style="color: #ffffff; background: rgba(255, 50, 0, 0.5)"><i class="fa-fw"></i>
+                                      Temp. 1</a>
+                                <a id="temp2Button" class="btn btn-block shadow" style="color: #ffffff; background: rgba(205, 0, 50, 0.5)"><i class="fa-fw"></i>
+                                      Temp. 2</a>
+                                  </div>
+
+                            </div>
+                        </div>
                     </div>
+                    <div class="card h-100 m-0" style="background: rgba(0, 0, 0, 1); border: rgba(255, 0, 0, 0.3);">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                  <a id="qButton" class="btn btn-block" style="background: rgba(0, 0, 255, 0.5); color: #ffffff;"><i class="fa-fw"></i>
+                                      Flow Rate</a>
+                                  </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card h-100 m-0" style="background: rgba(0, 0, 0, 1); border: rgba(255, 0, 0, 0.3);">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                  <a id="jButton" class="btn btn-block text-nowrap" style="background: rgba(0, 255, 0, 0.5); color: #ffffff;"><i class="fa-fw"></i>
+                                      J-Factor</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </li>
 
@@ -84,21 +162,16 @@
             <!-- Nav Item - Pages Collapse Menu -->
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Tables
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
+                    <span>Daten</span></a>
+            </li>-->
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Divider
+            <hr class="sidebar-divider d-none d-md-block">-->
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -120,7 +193,7 @@
                     <!-- PAGE TITLE -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
-                    </button> <h1 class="">Shish Monitor</h1>
+                    </button> <h1 class="text-nowrap" style="font-size: calc(2vw + 1.5rem); color: var(--primary);">Shish Monitor</h1>
 
 
 
@@ -132,15 +205,15 @@
 
 
 
-                        <!-- Nav Item - User Information -->
+                        <!-- Nav Item - User Information
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
+                            </a> -->
+                            <!-- Dropdown - User Information
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
@@ -160,7 +233,7 @@
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
-                            </div>
+                            </div> -->
                         </li>
 
                     </ul>
@@ -168,51 +241,39 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                  <div>
-                    <div id="content-wrapper" class="d-flex flex-column">
-                    <div class="container-fluid">
-                      <h1 class="h3 mb-0 text-gray-800"></h1>
-                    <!-- Page Heading -->
-                    <div class="card shadow mb-4">
+<!-- Begin Page Content -->
+  <div>
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div class="container-fluid">
+        <h1 class="h3 mb-0 text-gray-800"></h1>
+        <!-- Page Heading -->
+        <div class="card shadow mb-4">
 
-                          <div class="card-header py-3">
-                              <h6 class="m-0 font-weight-bold text-primary">Temperatur</h6>
-                          </div>
-                        <div class="card-body">
-                            <div class="chart-area">
-  <!-- #############################################################################################################-->
-
-                                <canvas id="shishmonitor1" width="auto" height="100%"></canvas>
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Live Monitoring</h6>
+          </div>
 
 
 
-                            </div>
-                            <div id="game">
-    <button onClick="choose('config1')">config1</button>
-    <button onClick="choose('config2')">config2</button>
-    <button onClick="choose('config3')">config3</button>
-    <div id="result"></div>
-    <br>
-    <br>
-    <button onClick="test()">DEBUG</button>
+
+<!-- #######################################################################-->
+
+        <div class="card-body">
+          <div>
+
+                <div style="width: auto; height: calc(32rem + 3vw)">
+                    <canvas id="myChart" ></canvas>
+                </div>
+
+
+
+<!-- #######################################################################-->
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-                            <div class="chart-area">
-
-<!-- #############################################################################################################-->
-
-                                <canvas id="shishmonitor2" width="auto" height="100%"></canvas>
-
-
-                            </div>
-                            <hr>
-                            Styling for the area chart can be found in the
-                            <code>/js/demo/chart-area-demo.js</code> file.
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
 
                           <!-- /.container-fluid -->
             <!-- End of Main Content -->
@@ -221,7 +282,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; ShishMonitor 2023</span>
                     </div>
                 </div>
             </footer>
@@ -235,24 +296,41 @@
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+        <i class="fas fa-angle-up"></i></a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div            class = "modal fade"
+                       id = "logoutModal"
+                 tabindex = "-1" r
+                      ole = "dialog"
+          aria-labelledby = "exampleModalLabel"
+              aria-hidden = "true">
+
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                    <h5 class = "modal-title"
+                           id = "exampleModalLabel">Ready to Leave?</h5>
+                    <button      class = "close"
+                                  type = "button"
+                          data-dismiss = "modal"
+                            aria-label = "Close">
+
+                      <span aria-hidden="true">×</span>
+
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+
+                <div class="modal-body">
+                  Select "Logout" below if you are
+                  ready to end your current session.
+                </div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <button class = "btn btn-secondary"
+                             type = "button"
+                     data-dismiss = "modal">Cancel</button>
+                         <a class = "btn btn-primary"
+                             href = "login.html">Logout</a>
                 </div>
             </div>
         </div>
@@ -260,7 +338,7 @@
 
     <!-- Bootstrap core JavaScript
   -->
-  <script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript
@@ -269,20 +347,15 @@
 
     <!-- Custom scripts for all pages
   -->
-  <script src="vendor/chart.js/Chart.bundle.min.js"></script>
+
   <script src="js/sb-admin-2.min.js"></script>
   <script src="js/demo/chart-area-demo.js"></script>
 
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.umd.min.js"></script>
-    <script src="js/d3.v6.min.js"></script>
-    <!-- Page level custom scripts -->
+<script src="js/d3.v6.min.js"></script>
+    <!-- Page level custom scripts
 
-    <script>
-
-
-
-    // Load the dataset
     var user;
     function choose(choice){
       user = choice;
@@ -292,374 +365,331 @@
       alert("You chose " + user);
       then(makechart)
     }
-    d3.csv("data.csv").then(makeChart);
-
-    // Plot the data with Chart.js
     var user = config1;
 
-    function makeChart(shishmonitor) {
-      const time = shishmonitor.map(function (d) {
-        return d.t;
-      });
-      const temp1 = shishmonitor.map(function (d) {
-        return d.T1;
-      });
-      const temp2 = shishmonitor.map(function (d) {
-        return d.T2;
-      });
-      const flow = shishmonitor.map(function (d) {
-        return d.Q;
-      });
-      const high = shishmonitor.map(function (d) {
-        return d.J;
-      });
+    var el = document.getElementById("reload");
+    if (el.addEventListener)
+    el.addEventListener("click", reload(), false);
+    else if (el.attachEvent)
+    el.attachEvent('onclick', reload());
+    -->
+    <script>
+        var ctx = document.getElementById("myChart").getContext("2d");
+        var myChart;
 
-      const col1 = "rgba(255, 0, 0, 0.5)";
-      const col2 = "rgba(205, 0, 150, 0.5)";
-      const col3 = "rgba(0, 0, 255, 0.5)";
-      const temppr = 2;
-      const flowpr = 3;
-      const tempps = 'rect';
-      const flowps = 'rectRot';
-      const DT1 = {
-        label: "T1",
-        lineTension: 0.3,
-        backgroundColor: "rgba(0, 0, 0, 0)",
-        borderColor: col1,
-        pointRadius: temppr,
-        pointBackgroundColor: col1,
-        pointBorderColor: col1,
-        pointHoverRadius: 3,
-        pointHoverBackgroundColor: col1,
-        pointHoverBorderColor: col1,
-        pointHitRadius: 10,
-        pointBorderWidth: 2,
-        pointStyle: tempps,
-        data: temp1,
-        yAxisID: 'y',
-      };
-      const DT2 = {
-        label: "T2",
-        lineTension: 0.3,
-        backgroundColor: "rgba(0, 0, 0, 0)",
-        borderColor: col2,
-        pointRadius: temppr,
-        pointBackgroundColor: col2,
-        pointBorderColor: col2,
-        pointHoverRadius: 3,
-        pointHoverBackgroundColor: col2,
-        pointHoverBorderColor: col2,
-        pointHitRadius: 10,
-        pointBorderWidth: 2,
-        data: temp2,
-        pointStyle: tempps,
-        yAxisID: 'y'
-      };
-      const DF = {
-        label: "Flow",
-        lineTension: 0.3,
-        backgroundColor: "rgba(78, 115, 223, 0.05)",
-        borderColor: "rgba(78, 115, 223, 1)",
-        pointRadius: 3,
-        pointBackgroundColor: "rgba(78, 115, 223, 1)",
-        pointBorderColor: "rgba(78, 115, 223, 1)",
-        pointHoverRadius: 3,
-        pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-        pointHoverBorderColor: "rgba(78, 115, 223, 1)",
-        pointHitRadius: 10,
-        pointBorderWidth: 2,
-        data: flow,
-        pointStyle: flowps,
-        yAxisID: 'y'
-      };
-      const DF2 = {
-        label: "Flow",
-        lineTension: 0.3,
-        backgroundColor: "rgba(78, 115, 223, 0.05)",
-        borderColor: "rgba(78, 115, 223, 1)",
-        pointRadius: 3,
-        pointBackgroundColor: "rgba(78, 115, 223, 1)",
-        pointBorderColor: "rgba(78, 115, 223, 1)",
-        pointHoverRadius: 3,
-        pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-        pointHoverBorderColor: "rgba(78, 115, 223, 1)",
-        pointHitRadius: 10,
-        pointBorderWidth: 2,
-        data: flow,
-        pointStyle: flowps,
-        yAxisID: 'y2'
-      };
-      const DJ = {
-        label: "J-Factor",
-        lineTension: 0.3,
-        backgroundColor: "rgba(0, 255, 0, 1)",
-        borderColor: "rgba(0, 0, 0, 1)",
-        pointRadius: flowpr,
-        pointBackgroundColor: "rgba(0, 0, 0, 1)",
-        pointBorderColor: "rgba(0, 0, 0, 1)",
-        pointHoverRadius: 3,
-        pointHoverBackgroundColor: "rgba(0, 0, 0, 1)",
-        pointHoverBorderColor: "rgba(0, 0, 0, 1)",
-        pointHitRadius: 10,
-        pointBorderWidth: 2,
-        data: high,
-        pointStyle: flowps,
-        yAxisID: 'y2'
-      };
+    // Load and create the initial chart
+    d3.csv("data.csv").then(function(data) {
 
-      const celsius = {
-        type: 'linear',
-        position: 'left',
-        ticks: {
-          maxTicksLimit: 10,
-          padding: 5,
-          // Include a dollar sign in the ticks
-          callback: function(value, index, values) {
-            return number_format(value) + '°C';
-          }
-        },
-      };
+        var col1 = "rgba(255, 50, 0, 0.5)";
+        var col2 = "rgba(205, 0, 50, 0.5)";
+        var col3 = "rgba(0, 0, 255, 0.5)";
+        var col4 = "rgba(0, 255, 0, 0.5)";
 
-      const temp = {
-        type: 'linear',
-        position: 'left',
-        ticks: {
-          maxTicksLimit: 10,
-          padding: 5,
-          // Include a dollar sign in the ticks
-          callback: function(value, index, values) {
-            return number_format(value) + '°C';
-          }
-        },
-      };
-      const lpminl = {
-          type: 'linear',
-          position: 'left',        // LEFT
-          grid: {
-            drawOnChartArea: false,
-          },
-          ticks: {
-            maxTicksLimit: 10,
-            padding: 5,
-            // Include a dollar sign in the ticks
-            callback: function(value, index, values) {
-              return number_format(value) + ' l/min';
-            }
-          },
-      };
+        var pr1 = 2;
+        var pr2 = 3;
+        var ps1 = 'rect';
+        var ps2 = 'rectRot';
 
-      const lpminr = {
-          type: 'linear',
-          position: 'right',        // RIGHT
-          grid: {
-            drawOnChartArea: false,
-          },
-          ticks: {
-            maxTicksLimit: 10,
-            padding: 5,
-            // Include a dollar sign in the ticks
-            callback: function(value, index, values) {
-              return number_format(value) + ' l/min';
-            }
-          },
-      };
+        myChart = new Chart(ctx, {
+          responsive: true,
+          type: "line",
+          data: {
+                labels: data.map(d => d.t),
 
-      const jfactor = {
-        type: 'linear',
-        position: 'right',
-        grid: {
-          drawOnChartArea: false,
-        },
-        ticks: {
-          maxTicksLimit: 10,
-          padding: 5,
-          // Include a dollar sign in the ticks
-          callback: function(value, index, values) {
-            return  'J-'+ number_format(value);
-          }
-        },
-      };
+                datasets: [
+                  {
+                    label: "Temperatur 1",
+                    lineTension: 0.3,
+                    backgroundColor: col1,
+                    borderColor: col1,
+                    pointRadius: pr1,
+                    pointBackgroundColor: col1,
+                    pointBorderColor: col1,
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: col1,
+                    pointHoverBorderColor: col1,
+                    pointHitRadius: 10,
+                    pointBorderWidth: 2,
+                    pointStyle: ps1,
+                    data: data.map(d => +d.temp1),
+                    yAxisID: 'y',
+                  },
+                  {
+                    label: "Temperatur 2",
+                    lineTension: 0.3,
+                    backgroundColor: col2,
+                    borderColor: col2,
+                    pointRadius: pr1,
+                    pointBackgroundColor: col2,
+                    pointBorderColor: col2,
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: col2,
+                    pointHoverBorderColor: col2,
+                    pointHitRadius: 10,
+                    pointBorderWidth: 2,
+                    pointStyle: ps1,
+                    data: data.map(d => +d.temp2),
+                    yAxisID: 'y',
+                  },
+                  {
+                    label: "Flowrate",
+                    lineTension: 0.3,
+                    backgroundColor: col3,
+                    borderColor: col3,
+                    pointRadius: pr1,
+                    pointBackgroundColor: col3,
+                    pointBorderColor: col3,
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: col3,
+                    pointHoverBorderColor: col3,
+                    pointHitRadius: 10,
+                    pointBorderWidth: 2,
+                    pointStyle: ps2,
+                    data: data.map(d => +d.q),
+                    yAxisID: 'y2',
 
-      const datafull = {
-        labels: time,
-        datasets: [DT1, DT2, DF, DJ,]
-      };
+                  },
+                  {
+                    label: "J-Factor",
+                    lineTension: 0.3,
+                    backgroundColor: "rgba(0, 255, 0, 1)",
+                    borderColor: col4,
+                    pointRadius: pr2,
+                    pointBackgroundColor: col4,
+                    pointBorderColor: col4,
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: col4,
+                    pointHoverBorderColor: col4,
+                    pointHitRadius: 10,
+                    pointBorderWidth: 2,
+                    pointStyle: ps2,
+                    data: data.map(d => +d.j),
+                    yAxisID: 'y3',
 
-      const data1 = {
-        labels: time,
-        datasets: [ DT1, DT2,]
-      };
+                  },
+                ],
+              },
 
-      const data2 = {
-        labels: time,
-        datasets: [ DF, DJ, ]
-      };
+            options: {
+              maintainAspectRatio: false,
+              plugins:
+              {
+                legend: {
+                  display: false
+                },
+              },
 
-      const data3 = {
-        labels: time,
-        datasets: [ DT1, DT2, DF2,]
-      };
+              scales:
+              {
+                y: {
+                  min: 0,
+                  max: 500,
+                  type: 'linear',
+                  ticks: {
+                        // Include a dollar sign in the ticks
+                        stepSize: 50,
+                        callback: function(value, index, ticks)
+                          {return value + '°C ';},
+                },
 
-      const data4 = {
-        labels: time,
-        datasets: [ DT1, DT2, DJ,]
-      };
+                },
+
+                y2: {
+                  min: 0,
+                  max: 10,
+                  type: 'linear',
+                  position: 'right',
+                  ticks: {
+                    stepSize: 1,
+                    callback: function(value, index, ticks)
+                      {return value + ' l/min';},
+                  },
+                  grid: {
+                    display: false,
+                  }
+                },
+
+                y3: {
+                  type: 'linear',
+                  position: 'right',
+                  display: 'auto',
+                  min: 0,
+                  max: 10,
+                  ticks: {
+                    display: false,
+                  },
+                  grid: {
+                    display: false,
+                  }
+                },
 
 
+                x: {
+                  type: 'linear',
+                  min: 0,
+                  suggestedMax: 60,
+                  ticks: {
+                    stepSize: 10,
+                    callback: function(value, index, ticks)
+                      {return value + ' min';},
+                  },
+                  grid: {
+                  }
+                },
 
-      const config1 = {
-        type: 'line',
-        data: data1,
-        options: {
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              type: 'linear',
-              ticks: {
-                maxTicksLimit: 10,
-                padding: 5,
-                // Include a dollar sign in the ticks
-                callback: function(value, index, values) {
-                  return number_format(value) + ' min';
-                }
               },
             },
 
-            y: temp,
+        });
+    }).catch(function(error) {
+        console.log("Error loading CSV file:", error);
+    });
 
-          },
-        }
-      };
+    //////////////////////////    BUTTONS    /////////////////////////////////////
+    ///////////////////////// FLOW - BUTTON  /////////////////////////////////////
+    const qButton = document.getElementById('qButton');
+     let qState = false;
 
-      const config2 = {
-        type: 'line',
-        data: data2,
-        options: {
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              type: 'linear',
-              ticks: {
-                maxTicksLimit: 10,
-                padding: 5,
-                // Include a dollar sign in the ticks
-                callback: function(value, index, values) {
-                  return number_format(value) + ' min';
-                }
-              },
-            },
+     // Function to be executed when toggle state is false
+     function enq() {
+       d3.csv("data.csv").then(function(data) {
+         myChart.data.datasets[2].data = data.map(d => +d.q);
+         myChart.update();
+       });
+     };
 
-            y: lpminl,
+     // Function to be executed when toggle state is true
+     function disq() {
+       d3.csv("data.csv").then(function(data){
+         myChart.data.datasets[2].data = '';
+         myChart.update();
+       });
+     }
 
-            y2: jfactor
-          },
-        }
-      };
+     // Add an event listener to the button
+     qButton.addEventListener('click', function () {
+       qState = !qState;
+       if (qState) {
+         disq();
+       } else {
+         enq();
+       }
+     });
 
-      const config3 = {
-        type: 'line',
-        data: data3,
-        options: {
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              type: 'linear',
-              ticks: {
-                maxTicksLimit: 10,
-                padding: 5,
-                // Include a dollar sign in the ticks
-                callback: function(value, index, values) {
-                  return number_format(value) + ' min';
-                }
-              },
-            },
+     ///////////////////////////////// HIGH - BUTTON ///////////////////////////////
+     const jButton = document.getElementById('jButton');
+     let jState = false;
 
-            y: temp,
+     function enj() {
+       d3.csv("data.csv").then(function(data) {
+         myChart.data.datasets[3].data = data.map(d => +d.j);
+         myChart.update();
+       });
+     };
 
-            y2: lpminr,
+     function disj() {
+       d3.csv("data.csv").then(function(data){
+         myChart.data.datasets[3].data = '';
+         myChart.update();
+       });
+     }
 
-          },
-        }
-      };
+     jButton.addEventListener('click', function () {
+       jState = !jState;
+       if (jState) {
+         disj();
+       } else {
+         enj();
+       }
+     });
 
-      const config4 = {
-        type: 'line',
-        data: data4,
-        options: {
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              type: 'linear',
-              ticks: {
-                maxTicksLimit: 10,
-                padding: 5,
-                // Include a dollar sign in the ticks
-                callback: function(value, index, values) {
-                  return number_format(value) + ' min';
-                }
-              },
-            },
+     ///////////////////////////// TEMP1 - BUTTON /////////////////////////////////
+     const temp1Button = document.getElementById('temp1Button');
+     let temp1State = false;
 
-            y: temp,
+     function entemp1() {
+       d3.csv("data.csv").then(function(data) {
+         myChart.data.datasets[0].data = data.map(d => +d.temp1);
+         myChart.update();
+       });
+     };
 
-            y2: jfactor,
-          },
-        }
-      };
+     function distemp1() {
+       d3.csv("data.csv").then(function(data){
+         myChart.data.datasets[0].data = '';
+         myChart.update();
+       });
+     }
 
-      const configfull = {
-        type: 'line',
-        data: datafull,
-        options: {
-          maintainAspectRatio: false,
-          scales: {
-            x: {
-              type: 'linear',
-              ticks: {
-                maxTicksLimit: 10,
-                padding: 5,
-                // Include a dollar sign in the ticks
-                callback: function(value, index, values) {
-                  return number_format(value) + ' min';
-                }
-              },
-            },
+     temp1Button.addEventListener('click', function () {
+       temp1State = !temp1State;
+       if (temp1State) {
+         distemp1();
+       } else {
+         entemp1();
+       }
+     });
 
-            y: temp,
+     ///////////////////////////// TEMP2 - BUTTON /////////////////////////////////
+     const temp2Button = document.getElementById('temp2Button');
+     let temp2State = false;
 
-            y2: lpminr,
+     function entemp2() {
+       d3.csv("data.csv").then(function(data) {
+         myChart.data.datasets[1].data = data.map(d => +d.temp2);
+         myChart.update();
+       });
+     };
 
-            y2: jfactor,
-          },
-        }
-      };
+     function distemp2() {
+       d3.csv("data.csv").then(function(data){
+         myChart.data.datasets[1].data = '';
+         myChart.update();
+       });
+     }
 
-      const shishmonitor1 = new Chart(
-        document.getElementById('shishmonitor1'),
-        user
-      );
+     temp2Button.addEventListener('click', function () {
+       temp2State = !temp2State;
+       if (temp2State) {
+         distemp2();
+       } else {
+         entemp2();
+       }
+     });
 
-      const shishmonitor2 = new Chart(
-        document.getElementById('shishmonitor2'),
-        config2
-      );
 
-      const shishmonitor3 = new Chart(
-        document.getElementById('shishmonitor3'),
-        config3
-      );
+     //////////////////////////////////RESET///////////////////////////////////////
+     const resetButton = document.getElementById("resetButton");
 
-      const combi2 = new Chart(
-        document.getElementById('shishmonitor4'),
-        config4
-      );
+     resetButton.addEventListener("click", function() {
+       d3.csv("data.csv").then(function(data){
+         myChart.data.datasets[0].data = '';
+         myChart.data.datasets[1].data = '';
+         myChart.data.datasets[2].data = '';
+         myChart.data.datasets[3].data = '';
+         myChart.update();
+         temp1State = true;
+         temp2State = true;
+         qState = true;
+         jState = true;
+       });
+     });
 
-      const full = new Chart(
-        document.getElementById('full'),
-        configfull
-      );
+     const allButton = document.getElementById("allButton");
+     allButton.addEventListener("click", function() {
+       d3.csv("data.csv").then(function(data) {
+         myChart.data.datasets[0].data = data.map(d => +d.temp1);
+         myChart.data.datasets[1].data = data.map(d => +d.temp2);
+         myChart.data.datasets[2].data = data.map(d => +d.q);
+         myChart.data.datasets[3].data = data.map(d => +d.j);
+         myChart.update();
+         temp1State = false;
+         temp2State = false;
+         qState = false;
+         jState = false;
+       });
+     });
 
-  }
     </script>
 
 
